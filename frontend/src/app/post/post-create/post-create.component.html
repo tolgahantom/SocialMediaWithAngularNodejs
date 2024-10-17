@@ -1,0 +1,16 @@
+<div class="card p-3 mb-4">
+  <h5>Share a Post</h5>
+  <form (ngSubmit)="sharePost(form)" #form="ngForm">
+    <textarea
+      ngModel
+      name="content"
+      class="form-control mb-3"
+      rows="3"
+      placeholder="What's on your mind?"
+      required=""
+    ></textarea>
+    <button [disabled]="form.invalid" type="submit" class="btn btn-warning">
+      Post
+    </button>
+  </form>
+</div>

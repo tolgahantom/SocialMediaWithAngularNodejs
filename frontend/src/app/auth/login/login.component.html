@@ -1,0 +1,43 @@
+<div class="row d-flex justify-content-center mt-5">
+  <h1 class="h3 text-center">Login Page</h1>
+  <div class="col-6 mt-3">
+    <form (ngSubmit)="handleAuth(form)" #form="ngForm">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          ngModel
+          name="email"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          ngModel
+          name="password"
+        />
+      </div>
+      @if (error) {
+      <p class="form-text text-danger mb-3">
+        {{ error }}
+      </p>
+      }
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+      <p class="mt-3 fst-italic fs-6">
+        Don't have an account?
+        <a
+          [routerLink]="['/auth/register']"
+          routerLinkActive="router-link-active"
+          class="fst-normal"
+        >
+          Register</a
+        >
+      </p>
+    </form>
+  </div>
+</div>
