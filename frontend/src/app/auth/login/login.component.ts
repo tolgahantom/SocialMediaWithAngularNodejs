@@ -16,7 +16,7 @@ export class LoginComponent {
       next: (res: any) => {
         localStorage.setItem('token', res.token);
         localStorage.setItem('user', JSON.stringify(res.user));
-        this.router.navigate(['/home']);
+        this.router.navigate(['']);
         this.error = '';
       },
       error: (err) => {

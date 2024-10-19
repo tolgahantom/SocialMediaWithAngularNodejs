@@ -38,7 +38,7 @@ export class RegisterComponent {
           next: (response: any) => {
             localStorage.setItem('token', response.token);
             localStorage.setItem('user', JSON.stringify(response.user));
-            this.router.navigate(['home']);
+            this.router.navigate(['']);
           },
           error: (err) => {
             console.error('Kayıt sırasında hata oluştu:', err);

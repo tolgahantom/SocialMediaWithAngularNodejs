@@ -3,8 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    redirectTo: 'post',
+    path: '',
+    redirectTo: '/post',
+    pathMatch: 'full',
   },
   {
     path: 'post',
